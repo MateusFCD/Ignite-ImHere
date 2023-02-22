@@ -31,7 +31,9 @@ export function Home() {
       {
         text: "Sim",
         onPress: () => {
-          Alert.alert("Deletado!");
+          setParticipants((prevState) =>
+            prevState.filter((participant) => participant !== name)
+          );
         },
       },
       {
